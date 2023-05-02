@@ -1,0 +1,26 @@
+Schedule
+
+Roles: Tasting-Organizer (PO), Developer
+
+
+Meet with Tasting-Organizer
+
+ * greetings, establish roles
+ * brings wine -> dev tries, but dont like, says "tastes awsome" with bad face
+ * explain background/business model (rember me, I forgot everything, explain it like I know nothing and there would be 200 people watching who would like to understand it as well)
+   * Wine Tastings as business model
+   * some payed or sponsored by the winemaker, it's only their wine then
+   * only general notion   
+ * we did this eventstorming, can you refresh my memory again
+
+ * dev explains the why we doing this in the code
+  * more accurate, less ambiguous
+  * we do it in a way that is understandable, you don't need coding skills to understand (only to write)
+  * you can actually verify the code
+  * the code becomes like a contract between PO and dev
+
+Rules 
+ * use business terms only, no technical stuff
+ * 
+
+
