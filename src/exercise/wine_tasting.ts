@@ -10,6 +10,13 @@
 
   type Wine = { color: WineColor; sweetness: Sweetness; grape: Grape; name: Name; year: Year; country: Country };
 
+  //start//////////// do not get same wine twice ///////////////
+
+  type Wine1 = { color: WineColor; sweetness: Sweetness; grape: Grape; name: Name; year: Year; country: Country };
+  type;
+
+  //end//////////// do not get same wine twice ///////////////
+
   type Rating = 1 | 2 | 3 | 4 | 5;
   type AgeRange = "18-28" | "29-34" | "35-45" | "46-99";
   type City = string;
@@ -17,12 +24,44 @@
   type Demographics = { ageRange: AgeRange; residence: Residence };
   type Taster = { name: Name; demographics: Demographics; favoriteWine: Wine };
 
+  type Venue = { adress: string }; // TODO more typing?
+
+  //start///////////// explicit types vs states with opt values ////////////////
+  // use same type with lots of nullables
+  type TastingState = "PLANNED" | "SCHEDULED" | "CANCELLED";
+  type Tasting1 = { state: TastingState; date?: Date; tasters?: Taster[]; venue?: Venue };
+
+  //TODO write some code to show difference in handling without the nullables (can TS compiler do that?)
+
+  // TODO maybe we could add a type InvitedTasters or something, similar to how Scott does it with his example of a verified mail adress?
+
+  // use explicit type
+  type Tastings =
+    | { state: "PLANNED"; date: Date }
+    | { state: "SCHEDULED"; date: Date; tasters: Taster[]; venue: Venue }
+    | { state: "CANCELLED"; date: Date; tasters: Taster[]; venue: Venue }
+    | { state: "ARCHIVED"; date: Date; tasters: Taster[]; venue: Venue };
+
+  //end///////////// explicit types vs states with opt values ////////////////
+
+  //start///////////// make logic understandable for Domain Experts ////////////////
   type Percentage = Brand<number, "Percentage">;
-  const createPercentage = (percentage: number): Percentage => {
+  const createPercentage1 = (percentage: number): Percentage => {
     if (percentage > 0 && percentage <= 100 && Math.floor(percentage) == percentage) {
       return percentage as Percentage;
     } else throw new Error("invalid percentage");
   };
+
+  /////////// more readable /////////////////
+  const createPercentage2 = (percentage: number): Percentage => {
+    if (isBetweenZeroAndHundred(percentage)) {
+      return percentage as Percentage;
+    } else throw new Error("invalid percentage");
+  };
+
+  function isBetweenZeroAndHundred(percentage: number) {
+    return percentage > 0 && percentage <= 100 && Math.floor(percentage) == percentage;
+  }
 
   type Recommend = (
     wine: Wine,
