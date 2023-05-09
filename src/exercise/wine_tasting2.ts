@@ -14,6 +14,11 @@ type WineRecommendationForNextRound = [WineRecommendation, WineRecommendation, W
 // type Recommend = (profile: TasterRatingProfil) => WineRecommondationForNextRound;
 // Po sagt, Leute sind zum ersten Mal da und bekommen 2 mal nacheinander einen sauren Wein
 // müssen sicherstellen, dass das Profil auf jeden Fall aktualisiert ist
+
+// Idee: “controller” zeigen, in dem die recommendation gemacht wird, und Publikum fragen, woher das verhalten mit dem neuen Taster kommt, der 2 mal einen sauren Wein bekommt
+// Idee: erklären, dass wir alle parameter explizit machen wollen und Publikum fragen, woher das Problem mit den Tastern kommt, die zweimal in Folge den gleichen Wein bekommen
+// TODO: “Controller” bauen, der das TasterRatingProfle bekommt und eine Recommendation ausspuckt
+
 // type Recommend = (profile: UpdatedTasterRatingProfil) => WineRecommondationForNextRound;
 
 // Problem 2
@@ -27,11 +32,13 @@ type WineRecommendationForNextRound = [WineRecommendation, WineRecommendation, W
 
 // type Recommend = (profile: UpdatedTasterRatingProfil, historyOfTastedWinesForTasting: Wine[], listOfWines: Wine[]) => WineRecommondationForNextRound;
 
-type Recommend = (
+type RecommendNextWine = (
   profile: UpdatedTasterRatingProfil,
   historyOfTastedWinesForTasting: Wine[],
   wineCellar: WineCellar
 ) => WineRecommendationForNextRound;
+
+type RecommendFirstWine = (wineCellar: WineCellar) => WineRecommendationForNextRound;
 
 //start///////////// make logic understandable for Domain Experts ////////////////
 type Percentage = Brand<number, "Percentage">;
@@ -53,3 +60,6 @@ const createPercentage2 = (percentage: number): Percentage => {
 function isBetweenZeroAndHundredWithoutDecimals(percentage: number) {
   return percentage > 0 && percentage <= 100 && Math.floor(percentage) == percentage;
 }
+
+// Idee: Vorgehen zum Thema der Diskussion machen
+// Idee: Publikum nach Namen frage, Leitplanken setzen aber mit Einbeziehen
