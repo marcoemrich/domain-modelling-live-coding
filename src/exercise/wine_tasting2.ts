@@ -4,11 +4,11 @@ type Wine = unknown;
 type UpdatedTasterRatingProfil = unknown;
 type WineCellar = Wine[];
 
-type WineRecommondation = { wine: Wine; recommendationPercentage: Percentage };
+type WineRecommendation = { wine: Wine; recommendationPercentage: Percentage };
 
-// move from multiple Wines WineRecommondation[] -> to exactly three wine recommondations
+// move from multiple Wines WineRecommondation[] -> to exactly three wine recommendations
 
-type WineRecommondationForNextRound = [WineRecommondation, WineRecommondation, WineRecommondation];
+type WineRecommendationForNextRound = [WineRecommendation, WineRecommendation, WineRecommendation];
 
 // Problem 1
 // type Recommend = (profile: TasterRatingProfil) => WineRecommondationForNextRound;
@@ -31,7 +31,7 @@ type Recommend = (
   profile: UpdatedTasterRatingProfil,
   historyOfTastedWinesForTasting: Wine[],
   wineCellar: WineCellar
-) => WineRecommondationForNextRound;
+) => WineRecommendationForNextRound;
 
 //start///////////// make logic understandable for Domain Experts ////////////////
 type Percentage = Brand<number, "Percentage">;
