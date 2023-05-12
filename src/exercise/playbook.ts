@@ -6,7 +6,7 @@ type RecommendWine1 = (wineCellar: WineCellar) => Wine;
 type WineCellar = unknown;
 
 // Ja Nee, wir empfehlen immer eine Auswahl aus 3 Weinen
-<
+
 type RecommendWine2 = (wineCellar: WineCellar) => WineRecommendation;
 type WineRecommendation = [Wine, Wine, Wine];
 
@@ -47,15 +47,13 @@ type RecommendWine3 = (wineCellar: WineCellar, profile: TasterRatingProfile) => 
 // Dev: "This is supposed to be hard"
 // PO: "Das versteht doch Niemand"
 // Übergeneralisierung
-type RecommendWine4 = (wineCellar: WineCellar, options: {profile?: TasterRatingProfile}) => WineRecommendation;
-
+type RecommendWine4 = (wineCellar: WineCellar, options: { profile?: TasterRatingProfile }) => WineRecommendation;
 
 // Diskussion: Explizite Darstellung
 // Lösung: 2 verschiedene Funktionen für unterschiedliche Ereignisse
 
 type RecommendNextWine = (wineCellar: WineCellar, profile: TasterRatingProfile) => WineRecommendation;
 type RecommendFirstWine = (wineCellar: WineCellar) => WineRecommendation;
-
 
 // Wir hatten ein paar Mal den Fall, dass ein neuer Taster direkt zwei Sauere Weine bekommen hat, obwohl er den ersten mit 1 Stern bewertet hat
 // Das ist ein Riesenproblem. Wir wollen ja einen guten ersten Eindruck hinterlassen
@@ -67,4 +65,4 @@ type RateWine3 = (rating: WineRating, profile: TasterRatingProfile) => TasterRat
 
 type RateWine4 = (rating: WineRating, profile: TasterRatingProfile) => UpdatedTasterRatingProfile;
 
-type UpdatedTasterRatingProfile = TasterRatingProfile & {__brand: "updated"};
+type UpdatedTasterRatingProfile = TasterRatingProfile & { __brand: "updated" };
