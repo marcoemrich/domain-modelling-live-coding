@@ -1,3 +1,4 @@
+// question from dev: whats the most important thing in your software?
 type RecommendWine = (wines: Wine[]) => Wine;
 type Wine = unknown; //explain: details later
 // Meinst Du unseren Winekeller? Wine[] -> Winecellar
