@@ -1,3 +1,4 @@
+//dev: we want to really understand each other, so please tell me how you call things!
 // question from dev: whats the most important thing in your software?
 type RecommendWine = (wines: Wine[]) => Wine;
 type Wine = unknown; //explain: details later
