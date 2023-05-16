@@ -186,9 +186,10 @@ type OnSale =
 // TODOs
 /*
 
-  prepare slides with patterns for the end
+  prepare slides with patterns for Wrap-up at the end
   cleanup repo
   print cheat sheets
+  leere Weinflasche organisieren
 
   -> more conflict
 
