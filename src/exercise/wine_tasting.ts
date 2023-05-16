@@ -7,8 +7,20 @@
   type Name = string;
   type Year = number;
   type Country = "France" | "Spain" | "Lithuania"; // and many more
+  type OnSale =
+    | { kind: "not on sale" }
+    | { kind: "stock sale"; stock: number }
+    | { kind: "campaign"; from: Date; to: Date };
 
-  type Wine = { color: WineColor; sweetness: Sweetness; grape: Grape; name: Name; year: Year; country: Country };
+  type Wine = {
+    color: WineColor;
+    sweetness: Sweetness;
+    grape: Grape;
+    name: Name;
+    year: Year;
+    country: Country;
+    onSale: OnSale;
+  };
 
   //start//////////// do not get same wine twice ///////////////
 

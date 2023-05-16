@@ -1,9 +1,40 @@
+// Greetings
+
+// ersten Wine probieren
+
+// Smalltalk
+
+// PO:
+// Algorithmic Aromas Tasting Co. - Startup
+// wir wollen das wine tasting ins Jahr 2023 holen: der Taster kann sich in der App anmelden und
+// bekommt dort auch ein Profil und Vorschläge, welche von unserer Software berechnet werden,
+// wir wollen skalieren und gute Sommeliers skalieren nicht
+
+// Dev: wir hatten doch ein EventStorming, ich hab ja alles vergessen,
+// lass und da nochmal durchgehen
+
+// PO: EventStorming erklären - Dev fragt
+
+// Dev: ich hab da vor kurzem auf ne Konferenz nen Talk gesehen und würde das gerne mal ausprobieren
+// "Also it is good for my CV if I use this!"
+// PO: what
+// DEV: never mind, anyway....
+
+// Dev explains method "FDM"
+// Slides: Book, TLDR,
+
 //dev: we want to really understand each other, so please tell me how you call things!
+// DEV: explizite Aufforderung: Bitte rede mir jederzeit rein, wenn etwas unklar ist,
+// wir wollen ein gemeinsames Verständnis schaffen, möglichst explizit, möglichst genau, Mißverstänisse aus dem Weg räumen
+
 // question from dev: whats the most important thing in your software?
 // ubiquitous languages
 
 type RecommendWine = (wines: Wine[]) => Wine;
 type Wine = unknown; //explain: details later
+
+// Format of Function =>, PO ask: what are these symbols?
+
 // Meinst Du unseren Winekeller? Wine[] -> Winecellar
 
 type RecommendWine1 = (wineCellar: WineCellar) => Wine;
@@ -60,6 +91,30 @@ type RecommendWine4 = (wineCellar: WineCellar, options: { profile?: TasterRating
 type RecommendNextWine = (wineCellar: WineCellar, profile: TasterRatingProfile) => WineRecommendation;
 type RecommendFirstWine = (wineCellar: WineCellar) => WineRecommendation;
 
+// => Wrapup: Slide, Motto: be more explicit, tradeoff klarmachen
+
+// specify wine details (maybe fast forward, depending on time)
+
+type Brand<K, T> = K & { __brand: T };
+
+type WineColor = "Red" | "White" | "Rose";
+type Sweetness = "Dry" | "Medium Dry" | "Sweet";
+type Grape = string;
+type Name = string;
+type Year = number;
+type Country = "France" | "Spain" | "Lithuania"; // and many more
+
+type Wine2 = {
+  color: WineColor;
+  sweetness: Sweetness;
+  grape: Grape;
+  name: Name;
+  year: Year;
+  country: Country;
+};
+
+// *************** GO LIVE ***************
+
 // Wir hatten ein paar Mal den Fall, dass ein neuer Taster direkt zwei Sauere Weine bekommen hat, obwohl er den ersten mit 1 Stern bewertet hat
 // Das ist ein Riesenproblem. Wir wollen ja einen guten ersten Eindruck hinterlassen
 type RateWine3 = (rating: WineRating, profile: TasterRatingProfile) => TasterRatingProfile;
@@ -68,12 +123,74 @@ type RateWine3 = (rating: WineRating, profile: TasterRatingProfile) => TasterRat
 // Dev kuckt in den richtigen Code, findet Bug -> zurück zum Modelling, wie
 // können wir solche Bugs in Zukunft verhindern
 
+// =>  open file with code for audience
+
+// => solution:
+
 type RateWine4 = (rating: WineRating, profile: TasterRatingProfile) => UpdatedTasterRatingProfile;
 
 type UpdatedTasterRatingProfile = TasterRatingProfile & { __brand: "updated" };
+
+// New Features
+
+// isLocal
+
+type Wine3 = {
+  color: WineColor;
+  sweetness: Sweetness;
+  grape: Grape;
+  name: Name;
+  year: Year;
+  country: Country;
+  isLocal: boolean;
+};
+
+type Wine4 = {
+  color: WineColor;
+  sweetness: Sweetness;
+  grape: Grape;
+  name: Name;
+  year: Year;
+  country: Country;
+  origin: "local" | "foreign";
+};
+
+// boolean -> Union Type for Wine isLocal: true -> "local": "foreign" (origin)
+
+// OnSale
+
+type Wine5 = {
+  color: WineColor;
+  sweetness: Sweetness;
+  grape: Grape;
+  name: Name;
+  year: Year;
+  country: Country;
+  onSale: OnSale;
+};
+
+type OnSale =
+  | { kind: "not on sale" }
+  | { kind: "stock sale"; stock: number }
+  | { kind: "campaign"; from: Date; to: Date };
+
+// Wrap Up: Patterns
+
+// Slides: Strong TypeSystem, Languages
 
 // Ideas:
 
 // New Feature: WineRecommendation has a Percentage, use to show Branding, as, No-Primitives -> maybe smart constructor
 // Optionals for some wines have no Recommendation percentage
-// boolean -> Union Type for Wine isLocal: true -> "local": "foreign" (origin)
+
+// TODOs
+/*
+
+  prepare slides with patterns for the end
+  cleanup repo
+  print cheat sheets
+
+  -> more conflict
+
+
+*/
