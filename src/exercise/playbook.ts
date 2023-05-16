@@ -1,5 +1,7 @@
 //dev: we want to really understand each other, so please tell me how you call things!
 // question from dev: whats the most important thing in your software?
+// ubiquitous languages
+
 type RecommendWine = (wines: Wine[]) => Wine;
 type Wine = unknown; //explain: details later
 // Meinst Du unseren Winekeller? Wine[] -> Winecellar
@@ -23,6 +25,7 @@ type WineRating = [Wine, Rating];
 // Dev: Wie sieht das Rating aus, Percentage?
 // PO: We want 5 Stars
 // Dev: what is the lowest value?
+// Publikum einbeziehen: Wie lässt sich das abbilden, z.B. number/int
 type Rating = 1 | 2 | 3 | 4 | 5;
 
 // Was

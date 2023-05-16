@@ -11,7 +11,7 @@
     "@vitest/ui": "latest",
     "bun-types": "^0.4.0",
     "vite": "latest",
-    "vitest": "^0.27.1"
+    "vitest": "^0.27.3"
   },
   "dependencies": {
     "esno": "^0.16.3",
