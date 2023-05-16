@@ -71,3 +71,9 @@ type RateWine3 = (rating: WineRating, profile: TasterRatingProfile) => TasterRat
 type RateWine4 = (rating: WineRating, profile: TasterRatingProfile) => UpdatedTasterRatingProfile;
 
 type UpdatedTasterRatingProfile = TasterRatingProfile & { __brand: "updated" };
+
+// Ideas:
+
+// New Feature: WineRecommendation has a Percentage, use to show Branding, as, No-Primitives -> maybe smart constructor
+// Optionals for some wines have no Recommendation percentage
+// boolean -> Union Type for Wine isLocal: true -> "local": "foreign" (origin)

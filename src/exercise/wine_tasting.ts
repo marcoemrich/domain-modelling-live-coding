@@ -13,7 +13,6 @@
   //start//////////// do not get same wine twice ///////////////
 
   type Wine1 = { color: WineColor; sweetness: Sweetness; grape: Grape; name: Name; year: Year; country: Country };
-  type;
 
   //end//////////// do not get same wine twice ///////////////
 
@@ -24,7 +23,7 @@
   type Demographics = { ageRange: AgeRange; residence: Residence };
   type Taster = { name: Name; demographics: Demographics; favoriteWine: Wine };
 
-  type Venue = { adress: string }; // TODO more typing?
+  type Venue = { address: string }; // TODO more typing?
 
   //start///////////// explicit types vs states with opt values ////////////////
   // use same type with lots of nullables
@@ -40,7 +39,7 @@
     | { state: "PLANNED"; date: Date }
     | { state: "SCHEDULED"; date: Date; tasters: Taster[]; venue: Venue }
     | { state: "CANCELLED"; date: Date; tasters: Taster[]; venue: Venue }
-    | { state: "ARCHIVED"; date: Date; tasters: Taster[]; venue: Venue };
+    | { state: "ARCHIVED"; date: Date; venue: Venue };
 
   //end///////////// explicit types vs states with opt values ////////////////
 
@@ -75,14 +74,14 @@ TODO:
 - Idee für realistische Invariante
 */
 
-/* Ideen: 
+/* Ideen:
 - verschiedene locations für verschieden tastings (premium oder anzahl der taster), verschiedene größen der Locations mit verschiedenem luxus level
 - verschiedene 'states' eines tasting (geplant,  cancelt, 'noch keine location', scheduled)
-- clash mit Name bei Wein und bei Taster, könnte man durch branding lösen, also: wir laufen rein, wenn wir Name bei beiden nehmen (zb. wir hatten 
+- clash mit Name bei Wein und bei Taster, könnte man durch branding lösen, also: wir laufen rein, wenn wir Name bei beiden nehmen (zb. wir hatten
   letztens Herrn Chardonnay zu Besuch und waren sehr verwirrt)
 - 'Country' clash: es gibt WineCountry und TasterCountry, zb gibts kein Wein in Alaska, wir haben aber Taster von dort. Dann könnte man den type nochmal splitten
-- Idee: PO kommt mit bugs zurück bzgl. percentage 
-    - 150% wurde angezeigt, 
+- Idee: PO kommt mit bugs zurück bzgl. percentage
+    - 150% wurde angezeigt,
     - 10,999999 % wurde angezeigt
     - Math.floor(percentage) == percentage kann PO nicht lesen, wir machen eine Funktion draus. TODO: rausfinden, was umgangssprachlich 'ganz zahl' heißt
     - taster hat selben wein 10 mal nacheinander bekommen (da höchstes Rating)
