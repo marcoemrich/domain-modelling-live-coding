@@ -57,7 +57,7 @@ type WineRating = [Wine, Rating];
 // PO: We want 5 Stars
 // Dev: what is the lowest value?
 // Publikum einbeziehen: Wie lässt sich das abbilden, z.B. number/int
-type Rating = nummber
+type Rating = number;
 // what number? we want to rate with 1-5 stars!
 // devs asks PO again, specify, do we have 3,5 rating?
 // DEV audiecen, how can we do it?
@@ -116,7 +116,13 @@ type Wine2 = {
   country: Country;
 };
 
+// We now have a common understanding
+// DEV: I will now implement the App matching the Domain Knowledge which we just encoded in the Types
+// and we will launch the App and meet each other after your first Tasting
+
 // *************** GO LIVE ***************
+
+// PO brings new wine
 
 // Wir hatten ein paar Mal den Fall, dass ein neuer Taster direkt zwei Sauere Weine bekommen hat, obwohl er den ersten mit 1 Stern bewertet hat
 // Das ist ein Riesenproblem. Wir wollen ja einen guten ersten Eindruck hinterlassen
@@ -158,6 +164,22 @@ type Wine4 = {
 
 // OnSale
 
+// New Wine -> prefers beer
+
+// Falsche Implementierung:
+
+type Wine6 = {
+  name: Name;
+  color: WineColor;
+  grape: Grape;
+  onSale: boolean;
+  campaignStart: Date;
+  campaignEnd: Date;
+  stock: number;
+};
+
+// Stock nur für Sale, kein Date außer campaign läuft
+
 type Wine5 = {
   color: WineColor;
   sweetness: Sweetness;
@@ -192,6 +214,7 @@ type OnSale =
   print cheat sheets
   leere Weinflasche organisieren
   Schild: Two Weeks Later
+  define TasterRatingProfile for CodeExample
 
   -> more conflict
 
