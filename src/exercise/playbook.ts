@@ -57,7 +57,12 @@ type WineRating = [Wine, Rating];
 // PO: We want 5 Stars
 // Dev: what is the lowest value?
 // Publikum einbeziehen: Wie lässt sich das abbilden, z.B. number/int
-type Rating = 1 | 2 | 3 | 4 | 5;
+type Rating = nummber
+// what number? we want to rate with 1-5 stars!
+// devs asks PO again, specify, do we have 3,5 rating?
+// DEV audiecen, how can we do it?
+
+type StarRating = 1 | 2 | 3 | 4 | 5;
 
 // Was
 
