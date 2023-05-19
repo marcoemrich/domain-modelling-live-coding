@@ -111,10 +111,8 @@ type Country = "France" | "Spain" | "Lithuania"; // and many more
 
 type Wine2 = {
   color: WineColor;
-  sweetness: Sweetness;
   grape: Grape;
   name: Name;
-  year: Year;
   country: Country;
 };
 
@@ -142,20 +140,16 @@ type UpdatedTasterRatingProfile = TasterRatingProfile & { __brand: "updated" };
 
 type Wine3 = {
   color: WineColor;
-  sweetness: Sweetness;
   grape: Grape;
   name: Name;
-  year: Year;
   country: Country;
   isLocal: boolean;
 };
 
 type Wine4 = {
   color: WineColor;
-  sweetness: Sweetness;
   grape: Grape;
   name: Name;
-  year: Year;
   country: Country;
   origin: "local" | "foreign";
 };
@@ -192,6 +186,8 @@ type OnSale =
 /*
 
   prepare slides with patterns for Wrap-up at the end
+    - talk about explicit types in Wine type, why we do it
+    - RecommendFirstWine -> RecommendNextWine: tradeoff klarmachen, ist jetzt lesbar/ in der function weniger komplex, dafür eben etwas mehr Code.
   cleanup repo
   print cheat sheets
   leere Weinflasche organisieren
