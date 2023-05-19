@@ -140,26 +140,6 @@ type RateWine4 = (rating: WineRating, profile: TasterRatingProfile) => UpdatedTa
 
 type UpdatedTasterRatingProfile = TasterRatingProfile & { __brand: "updated" };
 
-// New Features
-
-// isLocal
-
-type Wine3 = {
-  color: WineColor;
-  grape: Grape;
-  name: Name;
-  country: Country;
-  isLocal: boolean;
-};
-
-type Wine4 = {
-  color: WineColor;
-  grape: Grape;
-  name: Name;
-  country: Country;
-  origin: "local" | "foreign";
-};
-
 // boolean -> Union Type for Wine isLocal: true -> "local": "foreign" (origin)
 
 // OnSale
@@ -220,3 +200,23 @@ type OnSale =
 
 
 */
+
+// New Features
+
+// isLocal
+
+type Wine3 = {
+  color: WineColor;
+  grape: Grape;
+  name: Name;
+  country: Country;
+  isLocal: boolean;
+};
+
+type Wine4 = {
+  color: WineColor;
+  grape: Grape;
+  name: Name;
+  country: Country;
+  origin: "local" | "foreign";
+};
