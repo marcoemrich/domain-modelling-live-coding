@@ -2,16 +2,9 @@
   "name": "domain_modelling_with_ts",
   "module": "index.ts",
   "type": "module",
-  "scripts": {
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "test:run": "vitest run"
-  },
+  "scripts": {},
   "devDependencies": {
-    "@vitest/ui": "latest",
-    "bun-types": "^0.4.0",
-    "vite": "latest",
-    "vitest": "^0.27.3"
+    "bun-types": "^0.4.0"
   },
   "dependencies": {
     "esno": "^0.16.3",

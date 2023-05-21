@@ -13,7 +13,7 @@
 // Dev: wir hatten doch ein EventStorming, ich hab ja alles vergessen,
 // lass und da nochmal durchgehen
 
-// PO: EventStorming erklären, nur auf recommendation detailert eingehen, weil dass das wichtigste ist erstmal - Dev fragt
+// PO: EventStorming erklären, nur auf recommendation detailiert eingehen, weil dass das wichtigste ist erstmal - Dev fragt
 
 // Dev: ich hab da vor kurzem auf ne Konferenz nen Talk gesehen und würde das gerne mal ausprobieren
 // "Also it is good for my CV if I use this!"
