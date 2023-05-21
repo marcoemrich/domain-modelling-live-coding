@@ -2,7 +2,6 @@ type RateWine = (rating: WineRating, profile: TasterRatingProfile) => TasterRati
 type RecommendNextWine = (wineCellar: WineCellar, profile: TasterRatingProfile) => WineRecommendation;
 
 type TasterRatingProfile = unknown;
-// type UpdatedTasterRatingProfile = TasterRatingProfile & { _brand: "UpdatedTasterRatingProfile" };
 
 function processRatingAndRecommendWine(ratingFromUI: WineRating, profile: TasterRatingProfile, wineCellar: WineCellar) {
   const changedProfile = rateWine(ratingFromUI, profile);
@@ -86,3 +85,5 @@ type WineRecommendation = [Wine, Wine, Wine];
 const recommendNextWine: RecommendNextWine = (wineCellar, profile) => [{} as Wine, {} as Wine, {} as Wine];
 const rateWine: RateWine = (rating, profile) => ({} as TasterRatingProfile);
 const saveProfile = (profile: TasterRatingProfile) => undefined;
+
+// type UpdatedTasterRatingProfile = TasterRatingProfile & { _brand: "UpdatedTasterRatingProfile" };
