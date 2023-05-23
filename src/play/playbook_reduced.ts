@@ -7,7 +7,7 @@
 
 // Dev: seen at conference, Good for CV
 // PO: what?
-// DEV: never mind, anyway....
+// DEV: never mind, anyway...., maybe ask audience
 
 // Dev: explains "FDM"
 
@@ -50,7 +50,6 @@ type RateWine2 = (rating: WineRating, profile: TasterRatingProfile) => TasterRat
 type TasterRatingProfile = unknown;
 
 // Dev: what to do with the Recommendation?
-// PO: Take updated TasterProfile into account
 type RecommendWine3 = (wineCellar: WineCellar, profile: TasterRatingProfile) => WineRecommendation;
 
 // Dev tries to generalize
