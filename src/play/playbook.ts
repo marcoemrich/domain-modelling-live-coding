@@ -96,8 +96,6 @@ type RecommendWine4 = (wineCellar: WineCellar, options: { profile?: TasterRating
 type RecommendNextWine = (wineCellar: WineCellar, profile: TasterRatingProfile) => WineRecommendation;
 type RecommendFirstWine = (wineCellar: WineCellar) => WineRecommendation;
 
-// => Wrapup: Slide, Motto: be more explicit, tradeoff klarmachen
-
 // specify wine details (maybe fast forward, depending on time)
 
 type Brand<K, T> = K & { __brand: T };
