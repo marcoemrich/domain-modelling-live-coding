@@ -144,7 +144,7 @@ type UpdatedTasterRatingProfile = TasterRatingProfile & { __brand: "updated" };
 
 // Falsche Implementierung:
 
-type Wine6 = {
+type Wine5 = {
   name: Name;
   color: WineColor;
   grape: Grape;
@@ -156,7 +156,7 @@ type Wine6 = {
 
 // Stock nur für Sale, kein Date außer campaign läuft
 
-type Wine5 = {
+type Wine6 = {
   color: WineColor;
   sweetness: Sweetness;
   grape: Grape;
