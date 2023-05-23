@@ -98,8 +98,6 @@ type RecommendFirstWine = (wineCellar: WineCellar) => WineRecommendation;
 
 // specify wine details (maybe fast forward, depending on time)
 
-type Brand<K, T> = K & { __brand: T };
-
 type WineColor = "Red" | "White" | "Rose";
 type Sweetness = "Dry" | "Medium Dry" | "Sweet";
 type Grape = string;
