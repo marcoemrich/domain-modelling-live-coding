@@ -99,10 +99,8 @@ type RecommendFirstWine = (wineCellar: WineCellar) => WineRecommendation;
 // specify wine details (maybe fast forward, depending on time)
 
 type WineColor = "Red" | "White" | "Rose";
-type Sweetness = "Dry" | "Medium Dry" | "Sweet";
 type Grape = string;
 type Name = string;
-type Year = number;
 type Country = "France" | "Spain" | "Lithuania"; // and many more
 
 type Wine2 = {
@@ -148,6 +146,7 @@ type Wine5 = {
   name: Name;
   color: WineColor;
   grape: Grape;
+  country: Country;
   onSale: boolean;
   campaignStart: Date;
   campaignEnd: Date;
@@ -157,11 +156,9 @@ type Wine5 = {
 // Stock nur für Sale, kein Date außer campaign läuft
 
 type Wine6 = {
-  color: WineColor;
-  sweetness: Sweetness;
-  grape: Grape;
   name: Name;
-  year: Year;
+  color: WineColor;
+  grape: Grape;
   country: Country;
   onSale: OnSale;
 };
@@ -195,6 +192,7 @@ type OnSale =
   -> more conflict
 
 */
+
 
 // New Features
 
