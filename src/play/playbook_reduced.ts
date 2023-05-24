@@ -56,28 +56,30 @@ type RecommendWine3 = (wineCellar: WineCellar, profile: TasterRatingProfile) => 
 // Dev: "This is supposed to be hard"
 // PO: "nobody understands"
 // OverGeneralization
-type RecommendWine4 = (wineCellar: WineCellar, options: { profile?: TasterRatingProfile }) => WineRecommendation;
+type RecommendWine4 = (
+  wineCellar: WineCellar,
+  options: { profile?: TasterRatingProfile }
+) => WineRecommendation;
 
 // Explicit, Solution: 2 Functions
-type RecommendNextWine = (wineCellar: WineCellar, profile: TasterRatingProfile) => WineRecommendation;
+type RecommendNextWine = (
+  wineCellar: WineCellar,
+  profile: TasterRatingProfile
+) => WineRecommendation;
 type RecommendFirstWine = (wineCellar: WineCellar) => WineRecommendation;
 
 // specify wine details (maybe fast forward, depending on time)
-
-type Brand<K, T> = K & { __brand: T };
 
 type Wine2 = {
   color: WineColor;
   grape: Grape;
   name: Name;
-  year: Year;
   country: Country;
 };
 
 type WineColor = "Red" | "White" | "Rose";
 type Grape = string;
 type Name = string;
-type Year = number;
 type Country = "France" | "Spain" | "Lithuania"; // and many more
 
 // PO: common understanding
@@ -85,7 +87,6 @@ type Country = "France" | "Spain" | "Lithuania"; // and many more
 
 // *************** GO LIVE *****************
 // PO brings New Wine
-
 // 2 saure Wine despite 1 Star Rating
 type RateWine3 = (rating: WineRating, profile: TasterRatingProfile) => TasterRatingProfile;
 
@@ -94,7 +95,7 @@ type RateWine4 = (rating: WineRating, profile: TasterRatingProfile) => UpdatedTa
 type UpdatedTasterRatingProfile = TasterRatingProfile & { __brand: "UpdatedTasterRatingProfile" };
 
 // New Feature -> OnSale
-type Wine6 = {
+type Wine5 = {
   name: Name;
   color: WineColor;
   grape: Grape;
@@ -105,12 +106,34 @@ type Wine6 = {
 };
 
 // PO: that is wrong: only stock for Sale, Dates...
-type Wine5 = {
+type Wine6 = {
   onSale: OnSale;
 };
-type OnSale =
-  | { saleType: "not on sale" }
-  | { saleType: "stock sale"; stock: number }
-  | { saleType: "campaign"; from: Date; to: Date };
+
+type OnSale = NotOnSale | StockSale | CampaignSale;
+
+type NotOnSale = { saleType: "not on sale" };
+type CampaignSale = { saleType: "campaign sale"; from: Date; to: Date };
+type StockSale = { saleType: "stock sale"; stock: number };
 
 // New Wine -> prefers beer
+
+/*
+ideas:
+
+ * wrapup am Ende, TS <-> DDD
+ * UpdatedTasterProfile direkt am Bsp-Code -> schnelles Feedback, klarmachen das ist CompileTime!
+ * 2 Pattern-Slides rausnehmen
+ * live gang => Screen-animation: 3 weeks later, sponge bob meme
+ * oefter zurueck zum EventStorming (immer mal wieder zurück)
+ * Elevator pitch auf dem Screen (Slides), also PO switched Perspective
+
+
+
+
+ keep:
+
+  * Wrapup am Ende
+  * wie würde das Publikum das lösen?
+
+*/

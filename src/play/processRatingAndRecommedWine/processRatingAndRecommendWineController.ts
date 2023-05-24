@@ -1,12 +1,11 @@
-type RateWine = (rating: WineRating, profile: TasterRatingProfile) => TasterRatingProfile;
-type RecommendNextWine = (wineCellar: WineCellar, profile: TasterRatingProfile) => WineRecommendation;
+function processRatingAndRecommendWine(
+  ratingFromUI: WineRating,
+  profile: TasterRatingProfile,
+  wineCellar: WineCellar
+) {
+  const updatedProfile = rateWine(ratingFromUI, profile);
 
-type TasterRatingProfile = unknown;
-
-function processRatingAndRecommendWine(ratingFromUI: WineRating, profile: TasterRatingProfile, wineCellar: WineCellar) {
-  const changedProfile = rateWine(ratingFromUI, profile);
-
-  saveProfile(changedProfile);
+  saveProfile(updatedProfile);
 
   const recommendation = recommendNextWine(wineCellar, profile);
 
@@ -26,7 +25,18 @@ function processRatingAndRecommendWine(ratingFromUI: WineRating, profile: Taster
 
 
 
+*/
 
+type RateWine = (rating: WineRating, profile: TasterRatingProfile) => TasterRatingProfile;
+
+type RecommendNextWine = (
+  wineCellar: WineCellar,
+  profile: TasterRatingProfile
+) => WineRecommendation;
+
+// type UpdatedTasterRatingProfile = TasterRatingProfile & { _brand: "UpdatedTasterRatingProfile" };
+
+/*
 
 
 
@@ -82,8 +92,12 @@ type WineCellar = unknown;
 type Wine = unknown;
 type WineRecommendation = [Wine, Wine, Wine];
 
-const recommendNextWine: RecommendNextWine = (wineCellar, profile) => [{} as Wine, {} as Wine, {} as Wine];
-const rateWine: RateWine = (rating, profile) => ({} as TasterRatingProfile);
+const recommendNextWine: RecommendNextWine = (wineCellar, profile) => [
+  {} as Wine,
+  {} as Wine,
+  {} as Wine,
+];
+const rateWine: RateWine = (rating, profile) => ({});
 const saveProfile = (profile: TasterRatingProfile) => undefined;
 
-// type UpdatedTasterRatingProfile = TasterRatingProfile & { _brand: "UpdatedTasterRatingProfile" };
+type TasterRatingProfile = {};
