@@ -1,15 +1,25 @@
 /*
 
-  prepare slides with patterns for Wrap-up at the end
-    - talk about explicit types in Wine type, why we do it
-    - RecommendFirstWine -> RecommendNextWine: tradeoff klarmachen, ist jetzt lesbar/ in der function weniger komplex, dafür eben etwas mehr Code.
-  cleanup repo
-  print cheat sheets
+* 2 Pattern-Slides rausnehmen
+* wrapup am Ende, TS <-> DDD
+* oefter zurueck zum EventStorming (immer mal wieder zurück)
+* Elevator pitch auf dem Screen (Slides), also PO switched Perspective
+
+  EventStorming Schriftgröße
+  live gang => Screen-animation: 3 weeks later, sponge bob meme
+  Meme: 3 Weeks later
+  Countries with Audience
+
   leere Weinflasche organisieren
-  Schild: Two Weeks Later
-  define TasterRatingProfile for CodeExample
 
   -> more conflict
+
+
+ keep:
+
+  * Wrapup am Ende
+  * wie würde das Publikum das lösen?
+
 
 */
 

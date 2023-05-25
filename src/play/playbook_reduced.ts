@@ -117,23 +117,3 @@ type CampaignSale = { saleType: "campaign sale"; from: Date; to: Date };
 type StockSale = { saleType: "stock sale"; stock: number };
 
 // New Wine -> prefers beer
-
-/*
-ideas:
-
- * wrapup am Ende, TS <-> DDD
- * UpdatedTasterProfile direkt am Bsp-Code -> schnelles Feedback, klarmachen das ist CompileTime!
- * 2 Pattern-Slides rausnehmen
- * live gang => Screen-animation: 3 weeks later, sponge bob meme
- * oefter zurueck zum EventStorming (immer mal wieder zurück)
- * Elevator pitch auf dem Screen (Slides), also PO switched Perspective
-
-
-
-
- keep:
-
-  * Wrapup am Ende
-  * wie würde das Publikum das lösen?
-
-*/
