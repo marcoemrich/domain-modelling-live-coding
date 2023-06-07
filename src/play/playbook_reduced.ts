@@ -1,4 +1,4 @@
-// Greetings, first Wine, Dev: how is your new startup going?
+// Greetings, first Wine, Dev: how is your new startup doing?
 
 // PO: Algorithmic Aromas Tasting Co. - Startup
 // Dev: EventStorming, remember
@@ -49,7 +49,7 @@ type RateWine2 = (rating: WineRating, profile: TasterRatingProfile) => TasterRat
 // PO: No idea -> buz AI
 type TasterRatingProfile = unknown;
 
-// Dev: what to do with the Recommendation?
+// Dev: what to do with the TasterRatingProfile, can we use it for the Recommendation?
 type RecommendWine3 = (wineCellar: WineCellar, profile: TasterRatingProfile) => WineRecommendation;
 
 // Dev tries to generalize
@@ -74,13 +74,13 @@ type Wine2 = {
   color: WineColor;
   grape: Grape;
   name: Name;
-  country: Country;
+  year: Year
 };
 
 type WineColor = "Red" | "White" | "Rose";
 type Grape = string;
 type Name = string;
-type Country = "France" | "Spain" | "Lithuania"; // and many more
+type Year = number
 
 // PO: common understanding
 // Dev:  implement the App matching Types, launch meet
@@ -93,6 +93,9 @@ type RateWine3 = (rating: WineRating, profile: TasterRatingProfile) => TasterRat
 // => Dev: look into the code
 type RateWine4 = (rating: WineRating, profile: TasterRatingProfile) => UpdatedTasterRatingProfile;
 type UpdatedTasterRatingProfile = TasterRatingProfile & { __brand: "UpdatedTasterRatingProfile" };
+
+
+// *************** 3 Weeks later *****************
 
 // New Feature -> OnSale
 type Wine5 = {
