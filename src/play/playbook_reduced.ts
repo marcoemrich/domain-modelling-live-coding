@@ -71,15 +71,15 @@ type RecommendFirstWine = (wineCellar: WineCellar) => WineRecommendation;
 // specify wine details (maybe fast forward, depending on time)
 
 type Wine2 = {
+  name: Name;
   color: WineColor;
   grape: Grape;
-  name: Name;
   year: Year
 };
 
+type Name = string;
 type WineColor = "Red" | "White" | "Rose";
 type Grape = string;
-type Name = string;
 type Year = number
 
 // PO: common understanding
@@ -102,6 +102,7 @@ type Wine5 = {
   name: Name;
   color: WineColor;
   grape: Grape;
+  year: Year
   onSale: boolean;
   campaignStart: Date;
   campaignEnd: Date;
