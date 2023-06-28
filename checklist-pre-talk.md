@@ -1,0 +1,11 @@
+- fragen, ob wir das Licht ausmachen können bei Zeitsprung, wenn nicht "3 weeks later" screenshot bereit machen
+- Slides auf desktop
+- miro board ausserhalb der slides auf extra desktop, fürs schnelle hin und her springen beim coden
+- code snippets auf second screen,
+- empty editor bereit auf desktop
+- font size eingestellt
+- Spicker schreiben, auf welchem Desktop was liegt
+- Spickzettel von PO für Pitch,
+- Wein offen, Glas bereit
+- Bier bereit bei DEV am Tisch
+- "DEV" hat Cap auf
