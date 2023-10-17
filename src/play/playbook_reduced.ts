@@ -74,13 +74,13 @@ type Wine2 = {
   name: Name;
   color: WineColor;
   grape: Grape;
-  year: Year
+  year: Year;
 };
 
 type Name = string;
 type WineColor = "Red" | "White" | "Rose";
 type Grape = string;
-type Year = number
+type Year = number;
 
 // PO: common understanding
 // Dev:  implement the App matching Types, launch meet
@@ -94,7 +94,6 @@ type RateWine3 = (rating: WineRating, profile: TasterRatingProfile) => TasterRat
 type RateWine4 = (rating: WineRating, profile: TasterRatingProfile) => UpdatedTasterRatingProfile;
 type UpdatedTasterRatingProfile = TasterRatingProfile & { __brand: "UpdatedTasterRatingProfile" };
 
-
 // *************** 3 Weeks later *****************
 
 // New Feature -> OnSale
@@ -102,7 +101,7 @@ type Wine5 = {
   name: Name;
   color: WineColor;
   grape: Grape;
-  year: Year
+  year: Year;
   onSale: boolean;
   campaignStart: Date;
   campaignEnd: Date;
