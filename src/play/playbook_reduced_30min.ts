@@ -19,7 +19,7 @@ type Wine = unknown; //explain: details later
 
 // PO: Wine[] -> Wine cellar
 type RecommendWine1 = (wineCellar: WineCellar) => Wine;
-type WineCellar = unknown;
+type WineCellar = Wine[];
 
 // 3 Wines
 type RecommendWine2 = (wineCellar: WineCellar) => WineRecommendation;
@@ -27,8 +27,9 @@ type WineRecommendation = [Wine, Wine, Wine];
 
 // Dev: Tastes all 3?
 // PO: No No, chooses one
-type WineRating = [Wine, Rating];
+// Dev: But he rates it, right?
 type RateWine = (rating: WineRating) => unknown;
+type WineRating = [Wine, Rating];
 
 // Dev: Rating, Percentage?
 // PO: We want 5 Stars
