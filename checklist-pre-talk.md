@@ -1,6 +1,6 @@
 - fragen, ob wir das Licht ausmachen können bei Zeitsprung, wenn nicht "3 weeks later" screenshot bereit machen
-- Slides auf desktop
-- miro board ausserhalb der slides auf extra desktop, fürs schnelle hin und her springen beim coden
+- Präsi/Slides auf desktop https://miro.com/app/board/uXjVNZ-1Pns=/
+- miro board ausserhalb der slides auf extra desktop, fürs schnelle hin und her springen beim coden https://miro.com/app/board/uXjVM6pg1ag=/
 - code snippets auf second screen,
 - empty editor bereit auf desktop
 - font size eingestellt
