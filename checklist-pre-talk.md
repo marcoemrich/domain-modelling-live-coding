@@ -4,6 +4,7 @@
 - code snippets auf second screen,
 - empty editor bereit auf desktop
 - font size eingestellt
+- Bildschirmschoner aus
 - Spicker schreiben, auf welchem Desktop was liegt
 - Spickzettel von PO für Pitch,
 - Wein offen, Glas bereit
