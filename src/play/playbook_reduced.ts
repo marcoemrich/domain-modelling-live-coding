@@ -19,7 +19,7 @@ type Wine = unknown; //explain: details later
 
 // PO: Wine[] -> Wine cellar
 type RecommendWine1 = (wineCellar: WineCellar) => Wine;
-type WineCellar = unknown;
+type WineCellar = Wine[];
 
 // 3 Wines
 type RecommendWine2 = (wineCellar: WineCellar) => WineRecommendation;
@@ -66,6 +66,7 @@ type RecommendNextWine = (
   wineCellar: WineCellar,
   profile: TasterRatingProfile
 ) => WineRecommendation;
+
 type RecommendFirstWine = (wineCellar: WineCellar) => WineRecommendation;
 
 // specify wine details (maybe fast forward, depending on time)
