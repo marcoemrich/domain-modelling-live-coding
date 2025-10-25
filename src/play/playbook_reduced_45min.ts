@@ -17,9 +17,14 @@ type Wine = unknown; //explain: details later
 
 // PO: Symbols?
 
+// Dev: out of all Wines you offer?
+
 // PO: Wine[] -> Wine cellar
 type RecommendWine1 = (wineCellar: WineCellar) => Wine;
 type WineCellar = Wine[];
+
+// DEV: exactly one
+// No: always three, proven over the years
 
 // 3 Wines
 type RecommendWine2 = (wineCellar: WineCellar) => WineRecommendation;
@@ -86,9 +91,16 @@ type Year = number;
 // PO: common understanding
 // Dev:  implement the App matching Types, launch meet
 
+// BREAK - 3 Month later
+
 // *************** GO LIVE *****************
+
 // PO brings New Wine
-// 2 saure Wine despite 1 Star Rating
+
+// DEV claims (not honestly) to like the wine -> 5 Stars
+// PO types rating in Mobile
+
+// 2 dry Wines despite 1 Star Rating
 type RateWine3 = (rating: WineRating, profile: TasterRatingProfile) => TasterRatingProfile;
 
 // => Dev: look into the code
@@ -96,6 +108,8 @@ type RateWine4 = (rating: WineRating, profile: TasterRatingProfile) => UpdatedTa
 type UpdatedTasterRatingProfile = TasterRatingProfile & { __brand: "UpdatedTasterRatingProfile" };
 
 // *************** 3 Weeks later *****************
+
+// New Wine -> prefers beer
 
 // New Feature -> OnSale
 type Wine5 = {
@@ -119,5 +133,3 @@ type OnSale = NotOnSale | StockSale | CampaignSale;
 type NotOnSale = { saleType: "not on sale" };
 type CampaignSale = { saleType: "campaign sale"; from: Date; to: Date };
 type StockSale = { saleType: "stock sale"; stock: number };
-
-// New Wine -> prefers beer
