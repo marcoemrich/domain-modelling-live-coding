@@ -1,4 +1,3 @@
-- fragen, ob wir das Licht ausmachen können bei Zeitsprung, wenn nicht "3 weeks later" screenshot bereit machen
 - Präsi/Slides auf desktop
 - Normale Version https://miro.com/app/board/uXjVMU5E1Vk=/
 - 30 min Version: https://miro.com/app/board/uXjVNZ-1Pns=/
@@ -12,3 +11,4 @@
 - Wein offen, Glas bereit
 - Bier bereit bei DEV am Tisch
 - "DEV" hat Cap auf
+- processRatingAndRecommend Bug is openg
